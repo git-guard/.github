@@ -28,9 +28,9 @@ GitGuard provides enterprise-grade security scanning for GitHub repositories wit
 
 ### 🎯 Subscription Tiers
 
-- **Free** - 5 daily scans, basic vulnerability detection
-- **Pro** - 100 daily scans, AI-powered analysis, enhanced scanning, report exports (CSV, JSON, HTML)
-- **Premier** - Unlimited scans, secret scanning, DDoS testing, continuous monitoring, webhook notifications, priority support
+- **Free** - 5 scans per day, basic vulnerability detection (50+ patterns)
+- **Pro** - 100 scans per day, everything in Free plus AI-powered analysis, enhanced scanning, report exports (CSV, JSON, HTML)
+- **Premier** - Unlimited scans, all features enabled by default (AI analysis, dependency scanning, secret detection), DDoS testing, continuous monitoring, webhook notifications, priority support
 
 ### 🚀 Key Capabilities
 
@@ -58,7 +58,22 @@ GitGuard provides enterprise-grade security scanning for GitHub repositories wit
 The main GitGuard web application built with Next.js 16, PostgreSQL, and TypeScript. Includes the complete security scanning engine, dashboard, API, and all core features. Accessible at [gitguard.net](https://gitguard.net).
 
 ### [gitguard-cli](https://github.com/git-guard/gitguard-cli)
-Command-line security scanner for developers. Scan your code locally before deployment with support for 50+ vulnerability patterns across 12+ programming languages. Features CI/CD integration, pre-commit hooks, JSON output, and fast scanning. Install via npm: `npm install -g @gitguard/cli`
+Command-line security scanner for developers. Scan your code locally before deployment with support for 50+ vulnerability patterns across 12+ programming languages.
+
+**Key Features:**
+- **Smart Preference Syncing** - Automatically uses your web app settings (AI, dependencies, secrets)
+- **Browser-based Authentication** - Secure OAuth flow with long-lived tokens
+- **Override Flags** - Force-enable or disable features per scan (`--ai`, `--no-ai`, etc.)
+- **GitIgnore Support** - Respects `.gitignore` patterns to avoid uploading excluded files
+- **CI/CD Ready** - Exit codes for pipeline integration, JSON output support
+- **Cross-platform** - Works on macOS, Linux, Windows
+
+**Installation:**
+```bash
+npm install -g @gitguard/cli
+gitguard login
+gitguard scan
+```
 
 ## Technology Stack
 
@@ -93,27 +108,23 @@ Command-line security scanner for developers. Scan your code locally before depl
 
 ## For Developers
 
-GitGuard is built with modern web technologies and follows best practices:
+GitGuard is built with modern web technologies and follows best practices. If you're interested in contributing or learning more about our architecture, please reach out to us at support@gitguard.net.
+
+### Quick Start with CLI
 
 ```bash
-# Clone the repository
-git clone https://github.com/git-guard/app-git-guard.git
-cd app-git-guard
+# Install the CLI
+npm install -g @gitguard/cli
 
-# Install dependencies
-yarn install
+# Authenticate
+gitguard login
 
-# Set up environment variables
-cp .env.example .env.local
+# Scan your project
+gitguard scan
 
-# Run database migrations
-psql $POSTGRES_URL < scripts/supabase-schema.sql
-
-# Start development server
-yarn dev
+# Check your account
+gitguard whoami
 ```
-
-Visit the [main repository](https://github.com/git-guard/app-git-guard) for detailed setup instructions, architecture documentation, and contribution guidelines.
 
 ## Community & Support
 

@@ -55,7 +55,10 @@ GitGuard provides enterprise-grade security scanning for GitHub repositories wit
 ## Our Repositories
 
 ### [app-git-guard](https://github.com/git-guard/app-git-guard)
-The main GitGuard application built with Next.js 16, PostgreSQL, and TypeScript. Includes the complete security scanning engine, dashboard, API, and all core features.
+The main GitGuard web application built with Next.js 16, PostgreSQL, and TypeScript. Includes the complete security scanning engine, dashboard, API, and all core features. Accessible at [gitguard.net](https://gitguard.net).
+
+### [gitguard-cli](https://github.com/git-guard/gitguard-cli)
+Command-line security scanner for developers. Scan your code locally before deployment with support for 50+ vulnerability patterns across 12+ programming languages. Features CI/CD integration, pre-commit hooks, JSON output, and fast scanning. Install via npm: `npm install -g @gitguard/cli`
 
 ## Technology Stack
 

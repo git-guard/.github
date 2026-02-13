@@ -26,6 +26,18 @@ GitGuard provides enterprise-grade security scanning for GitHub repositories wit
 - **Enhanced Security Scoring** - Comprehensive security score calculation based on all findings
 - **DDoS Testing** - Simulated DDoS attack testing to evaluate application resilience (Premier tier only)
 
+### Advanced Security Tools (New)
+
+- **CVSS 3.1 Scoring** - Industry-standard vulnerability scoring with base, temporal, and environmental metrics (Pro/Premier)
+- **API Security Scanner** - Analyzes OpenAPI/Swagger and GraphQL schemas for security misconfigurations (Premier)
+- **Vulnerability Validation** - Confidence scoring (0-100%) with false positive detection and proof-of-concept generation (Pro/Premier)
+- **Compliance Reporting** - Generate compliance reports mapped to industry frameworks:
+  - OWASP Top 10 (Web Application Security)
+  - PCI-DSS 4.0 (Payment Card Industry)
+  - SOC 2 (Service Organization Controls)
+  - HIPAA (Healthcare)
+  - CIS Controls (Security Best Practices)
+
 ### 🎯 Subscription Tiers
 
 - **Free** - 5 scans per day, basic vulnerability detection (50+ patterns)
@@ -67,6 +79,12 @@ Command-line security scanner for developers. Scan your code locally before depl
 - **GitIgnore Support** - Respects `.gitignore` patterns to avoid uploading excluded files
 - **CI/CD Ready** - Exit codes for pipeline integration, JSON output support
 - **Cross-platform** - Works on macOS, Linux, Windows
+
+**New CLI Options:**
+- `--cvss` - Enable CVSS 3.1 vulnerability scoring
+- `--api-security` - Scan API specifications for security issues
+- `--validate` - Enable vulnerability validation with confidence scoring
+- `--compliance <framework>` - Generate compliance report (owasp, pci-dss, soc2, hipaa, cis, all)
 
 **Installation:**
 ```bash

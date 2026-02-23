@@ -2,7 +2,7 @@
 
 This repository contains the organization profile for **GitGuard**.
 
-The profile appears on the organization page at https://github.com/yourusername *(update with your actual GitHub organization URL)*
+The profile appears on the organization page at https://github.com/git-guard
 
 ## Structure
 
